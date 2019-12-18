@@ -2,8 +2,11 @@ var cats = [];
 var amountOfCats = 3;
 var tocco;
 var finalScore = 0;
-var font;
 
+var muovi = false;
+
+//immagini
+var font;
 var gatto;
 var macch;
 var strada;
@@ -22,7 +25,7 @@ setup = function(){
     canvas.position(windowWidth/2 - 450, windowHeight/2 - 500);
    	background(0);
 
-    tocco = width/2;
+    tocco = 0;
 
     for(var i = 0; i < amountOfCats; i++) {
       var movingCats = new Cat();
@@ -53,10 +56,17 @@ draw = function() {
   }
 
   //move car as cursor
+  if(muovi == false){
+    tocco = 700;
+    image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
+  }
+
+  if(muovi == true){
   for(var i = 0; i < touches.length; i++){
     tocco = touches[i].x;
     image(macch, tocco, windowHeight / 2 - 100, macch.width/2, macch.height/2);
   }
+}
   // if (touches.length > 0) {
   //   tocco = touches[0].x;
   //   image(macch, touches[0].x, windowHeight / 2 - 100, macch.width/2, macch.height/2);
@@ -97,6 +107,14 @@ draw = function() {
   text("score: " + finalScore + "/3", width - 350, height/10 - 40);
   pop();
 
+}
+
+function touchStarted(){
+  muovi = true;
+}
+
+function touchEnded(){
+  muovi = false;
 }
 
 function Cat() {
