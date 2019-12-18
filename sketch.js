@@ -14,10 +14,10 @@ var strada;
 var canvas;
 
 preload = function(){
-  font = loadFont("assets/Cygnito Mono.ttf");
-  gatto = loadImage("assets/gatto.png");
-  macch = loadImage("assets/macchina.png");
-  strada = loadImage("assets/strada.png");
+  font = loadFont("./assets/Cygnito Mono.ttf");
+  gatto = loadImage("./assets/gatto.png");
+  macch = loadImage("./assets/macchina.png");
+  strada = loadImage("./assets/strada.png");
 }
 
 setup = function(){
