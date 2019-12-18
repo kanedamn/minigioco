@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <title>HEX</title>
+
+    <style>
+    @font-face { font-family: Cygnito Mono; src: url('../assets/Cygnito Mono.ttf'); }
+
+    body {
+      padding: 0;
+      margin: 0;
+      }
+
+    html, body {
+      overflow-x: hidden;
+      overflow-y: hidden;
+      }
+    </style>
+  </head>
+  <style>
+
+  .caret {
+    display: inline-block;
+    width: 3px;
+    margin-bottom: -2px;
+    margin-left: 3px;
+    margin-right: -4px;
+    height: 16px;
+    animation: blink 0.8s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+  body{
+    background-color: black;
+  }
+
+  p{
+    color: red;
+    font-size: 45px;
+    font-family: "Cygnito Mono";
+  }
+
+  div{
+    position: fixed;
+    top: 62%;
+    left: 50%;
+    width: 92%;
+    height: 86%;
+    transform: translate(-50%, -50%);
+  }
+
+  #password{
+    position: fixed;
+    top: 130%;
+    left: 50%;
+    width: 92%;
+    height: 86%;
+    transform: translate(-50%, -50%);
+  }
+
+  button {
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    color: red;
+    font-size: 45px;
+    font-family: "Cygnito Mono";
+    left: 50%;
+    transform: translate(-50%, 80%);
+  }
+
+  #arrendo{
+    position: absolute;
+    background-color: transparent;
+    border-color: transparent;
+    color: red;
+    font-size: 45px;
+    font-family: "Cygnito Mono";
+    transform: translate(-50%, 200%);
+  }
+
+  form{
+    font-size: 45px;
+    font-family: "Cygnito Mono";
+    color: red;
+  }
+
+  input[type="text"] {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 45px;
+    font-family: "Cygnito Mono";
+    color: red;
+  }
+
+  img{
+    max-width: 15vh;
+    height: auto;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #error{
+    opacity: 0;
+    position: absolute;
+    top: 80%;
+    max-width: 25vh;
+  }
+
+  </style>
+
+  <script src="p5.min.js"></script>
+  <script src="./addons/p5.dom.min.js"></script>
+  <script src="sketch.js"></script>
+
+ <div id="password">
+   <p> > impedisci ai gatti neri di attraversare la strada</p>
+    </div>
+
+    <img src="../assets/occhioicona.png" alt>
+  </body>
+</html>
